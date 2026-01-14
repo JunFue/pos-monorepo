@@ -84,6 +84,9 @@ importers:
 
   apps/admin:
     dependencies:
+      '@pos/supabase':
+        specifier: workspace:*
+        version: link:../../packages/supabase
       '@pos/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -99,7 +102,7 @@ importers:
         version: 19.2.3(@types/react@19.2.8)
       eslint-config-next:
         specifier: 16.1.1
-        version: 16.1.1(@typescript-eslint/parser@8.53.0(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)
+        version: 16.1.1(eslint@9.39.2)(typescript@5.9.3)
 
   apps/pos:
     dependencies:
@@ -121,6 +124,9 @@ importers:
       '@hookform/resolvers':
         specifier: ^5.2.2
         version: 5.2.2(react-hook-form@7.71.1(react@19.2.3))
+      '@pos/supabase':
+        specifier: workspace:*
+        version: link:../../packages/supabase
       '@pos/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -172,10 +178,26 @@ importers:
         version: 7.0.3
       eslint-config-next:
         specifier: ^16.0.7
-        version: 16.1.1(eslint@9.39.2)(typescript@5.9.3)
+        version: 16.1.1(@typescript-eslint/parser@8.53.0(eslint@9.39.2)(typescript@5.9.3))(eslint@9.39.2)(typescript@5.9.3)
       supabase:
         specifier: ^2.71.3
         version: 2.72.6
+
+  packages/supabase:
+    dependencies:
+      '@supabase/ssr':
+        specifier: ^0.8.0
+        version: 0.8.0(@supabase/supabase-js@2.90.1)
+      '@supabase/supabase-js':
+        specifier: ^2.90.1
+        version: 2.90.1
+      next:
+        specifier: ^16.1.1
+        version: 16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+    devDependencies:
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/ui:
     dependencies:

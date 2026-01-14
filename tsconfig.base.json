@@ -11,7 +11,8 @@
     "baseUrl": ".",
     "paths": {
       "@pos/ui": ["packages/ui"],
-      "@pos/utils": ["packages/utils"]
+      "@pos/utils": ["packages/utils"],
+      "@pos/supabase": ["packages/supabase/src"]
     }
   }
 }

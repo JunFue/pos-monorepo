@@ -26,7 +26,8 @@
     "swr": "^2.3.8",
     "web-vitals": "^3.5.0",
     "yup": "^1.7.1",
-    "@pos/ui": "workspace:*"
+    "@pos/ui": "workspace:*",
+    "@pos/supabase": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20",
